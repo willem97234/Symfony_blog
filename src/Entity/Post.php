@@ -40,6 +40,11 @@ class Post
      * @ORM\Column(type="string", length=50)
      */
     protected $file;
+    
+   /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="posts")
+     */
+    protected $author;
 
 
     public function eraseCredentials()
@@ -64,7 +69,7 @@ class Post
 
     public function getId()
     {
-        return $this->id;
+        return $this->idPost;
     }
 
     public function setName($name)
@@ -76,7 +81,17 @@ class Post
     {
         return $this->name;
     }
-
-
-
+    
+    public function getAuthor(){
+        return $this->author;
+    }
+    
+    public function getContent(){
+        return $this->content;
+    }
+    
+    public function getTitle(){
+        return $this->title;
+    }
+    
 }

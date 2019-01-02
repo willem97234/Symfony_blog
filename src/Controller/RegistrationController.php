@@ -43,7 +43,7 @@ class RegistrationController extends Controller
             return $this->redirectToRoute('login');
         }
 
-        return $this->render('auth/register.html.twig', [
+        return $this->render('register.html.twig', [
             'form' => $form->createView(),
         ]);
     }

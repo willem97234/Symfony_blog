@@ -4,3 +4,11 @@ login:
     path: /login
     controller: App\Controller\SecurityController::loginAction
 
+list_posts:
+    path: /wall
+    controller: App\Controller\WallController::listPostsAction
+    
+show_post:
+    path: /post/{id}
+    controller: App\Controller\PostController::showPostAction
+    

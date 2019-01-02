@@ -1,0 +1,7 @@
+{# empty Twig template #}
+ <ul>
+{% for post in posts %}
+   
+    <li>{{ post.author.name }} : {{ post.content }} <a href=" {{ path('show_post', {'id': post.id}) }}">Voir</a></li>
+{% endfor %}
+ </ul>

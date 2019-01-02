@@ -51,6 +51,8 @@ class User implements UserInterface
      */
     protected $password;
 
+    protected $posts;
+    
     public function eraseCredentials()
     {
         return null;
@@ -124,5 +126,13 @@ class User implements UserInterface
     public function getSalt()
     {
         return null;
+    }
+    
+    public function getPosts(){
+        return $this->posts;
+    }
+    
+    public function setPosts($posts){
+        $this->posts = $posts;
     }
 }
